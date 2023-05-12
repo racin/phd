@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package pos;
+
+option go_package = "pb";
+
+message Challenge {
+    bytes Nonce = 1;
+    bytes Address = 2;
+}
+
+message Proof {
+    Challenge Challenge = 1;
+    bytes Hash = 2;
+}
+
+message Response {
+    Proof Proof = 1;
+    bytes Signature = 3;
+    bytes BlockHash = 4;
+}

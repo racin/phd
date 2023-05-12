@@ -1,0 +1,29 @@
+if [ $1 -eq 1 ] ; then
+    # initial installation
+    if [ ! -f /var/lib/bee/keys/libp2p.key ]; then
+        /usr/bin/bee init --config /etc/bee/bee.yaml >/dev/null 2>&1
+        chown -R bee:bee /var/lib/bee
+    fi
+    systemctl --no-reload preset bee.service &>/dev/null || :
+    systemctl --no-reload enable bee.service &>/dev/null || :
+    echo "
+Logs:   journalctl -f -u bee.service
+Config: /etc/bee/bee.yaml
+
+Bee requires a Gnosis Chain RPC endpoint to function. By default this is expected to be found at ws://localhost:8546.
+
+Please see https://docs.ethswarm.org/docs/installation/install for more details on how to configure your node.
+
+After you finish configuration run 'sudo bee-get-addr' and fund your node with XDAI, and also XBZZ if so desired.
+    "
+fi
+
+# allow group members (bee user) to use clef's socket
+if [ -S /var/lib/bee-clef/clef.ipc ]; then
+    chmod 660 /var/lib/bee-clef/clef.ipc
+fi
+
+if [ $1 -eq 2 ] ; then
+    # upgrade
+    systemctl --no-reload start bee.service &>/dev/null || :
+fi

@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package snips;
+
+option go_package = "pb";
+
+message Proof {
+  uint64 Nonce = 1;    // SNIPS
+  bytes MPHF = 2;      // SNIPS
+  uint32 Length = 3;   // SNIPS. Todo: can be dervied from MPHF
+  bytes Begin = 4;     // SNIPS
+  bytes End = 5;       // SNIPS
+}
+
+message Maintain {
+  uint64 Nonce = 1;
+  bytes BitVector = 2;
+}
+
+message UploadDone {
+}
+
+message Request {
+  uint64 Nonce = 1;
+}
+
+message SignedProof {
+  Proof Proof = 1;
+  bytes Signature = 2; // Verify authenticity of sender
+  bytes BlockHash = 3; // Verify authenticity of sender
+}
+
+message ReqAddresses {
+}
+
+message Addresses {
+  bytes Marshalled = 1;
+}

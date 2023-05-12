@@ -1,0 +1,119 @@
+run:
+  timeout: 10m
+linters:
+  enable:
+    - asciicheck
+    - bidichk
+    - depguard
+    - dogsled
+    - durationcheck
+    - errcheck
+    - errname
+    - errorlint
+    - exportloopref
+    - forbidigo
+    - gochecknoinits
+    - goconst
+    - gofmt
+    - goheader
+    - gomoddirectives
+    - goprintffuncname
+    - gosimple
+    - govet
+    - importas
+    - ineffassign
+    - misspell
+    - nakedret
+    - nilerr
+    - noctx
+    - paralleltest
+    - prealloc
+    - predeclared
+    - promlinter
+    - staticcheck
+    - thelper
+    - tparallel
+    - typecheck
+    - unconvert
+    - unused
+    - wastedassign
+
+linters-settings:
+  govet:
+    enable:
+      - asmdecl
+      - assign
+      - atomic
+      - atomicalign
+      - bools
+      - buildtag
+      - cgocall
+      - composites
+      - copylocks
+      - deepequalerrors
+      - errorsas
+      # - fieldalignment ## temporally disabled
+      - findcall
+      - framepointer
+      - httpresponse
+      - ifaceassert
+      - loopclosure
+      - lostcancel
+      - nilfunc
+      - nilness
+      - printf
+      - reflectvaluecompare
+      # - shadow ## temporally disabled
+      - shift
+      - sigchanyzer
+      - sortslice
+      - stdmethods
+      - stringintconv
+      - structtag
+      - testinggoroutine
+      - tests
+      - unmarshal
+      - unreachable
+      - unsafeptr
+      - unusedresult
+      - unusedwrite
+  goheader:
+    values:
+      regexp:
+        date: "20[1-2][0-9]"
+    template: |-
+      Copyright {{date}} The Swarm Authors. All rights reserved.
+      Use of this source code is governed by a BSD-style
+      license that can be found in the LICENSE file.
+issues:
+  exclude-rules:
+    - linters:
+        - goheader
+      text: "go-ethereum Authors" ## disable check for other authors
+    - path: _test\.go
+      linters:
+        - goconst ## temporally disable goconst in test
+    - linters:
+        - forbidigo
+      path: cmd/bee/cmd
+      text: "use of `fmt.Print"   ## allow fmt.Print in cmd directory
+    - linters:
+        - dogsled
+      path: pkg/api/(.+)_test\.go # temporally disable dogsled in api test files
+      # temporally disable paralleltest in following packages
+    - linters: paralleltest
+      path: pkg/topology
+    - linters: paralleltest
+      path: pkg/localstore
+    - linters: paralleltest
+      path: pkg/postage
+    - linters: paralleltest
+      path: pkg/bmt
+    - linters: paralleltest
+      path: pkg/pushsync
+    - linters: paralleltest
+      path: pkg/log
+    - linters: paralleltest
+      path: pkg/statestore
+    - linters: paralleltest
+      path: pkg/p2p
