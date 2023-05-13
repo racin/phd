@@ -165,7 +165,6 @@ func BenchmarkGenerateNonceSecp256k(b *testing.B) {
 }
 
 func generateNonce_rand() (nonce []byte, err error) {
-	// TODO(johningve) store the key somewhere?
 	var k [32]byte
 	_, err = io.ReadFull(rand.Reader, k[:])
 	if err != nil {
@@ -179,7 +178,6 @@ func generateNonce_rand() (nonce []byte, err error) {
 }
 
 func generateNonce_secp256k() (nonce []byte, err error) {
-	// TODO(johningve) store the key somewhere?
 	k, err := crypto.GenerateSecp256k1Key()
 	if err != nil {
 		return nil, fmt.Errorf("error generating key for nonce: %w", err)

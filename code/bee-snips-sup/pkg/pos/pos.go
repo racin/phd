@@ -67,8 +67,6 @@ type Options struct {
 }
 
 type Service struct {
-	// components:
-
 	logger    log.Logger
 	push      pushsync.PushSyncer
 	sender    sender.Sender
@@ -80,8 +78,6 @@ type Service struct {
 	o Options
 
 	metrics metrics
-
-	// data:
 
 	address   swarm.Address
 	blockHash []byte
@@ -223,7 +219,6 @@ func (s *Service) reuploadChunk(ctx context.Context, chunkAddr swarm.Address) (s
 		if err != nil {
 			s.logger.Error(err, "pos: failed to check for chunk in local store: %v")
 		} else if has {
-			// If self is the closest node, and we have the chunk locally, then there is no work to do.
 			return chunkStatus{prover: s.address, addr: chunkAddr, status: statusProved}
 		}
 	} else if errors.Is(err, sender.ErrNotSent) {
@@ -287,7 +282,6 @@ func (s *Service) pushChunk(ctx context.Context, chunkAddr swarm.Address) error 
 }
 
 func (s *Service) generateNonce() (nonce []byte, err error) {
-	// TODO(johningve) store the key somewhere?
 	var k [32]byte
 	_, err = io.ReadFull(rand.Reader, k[:])
 	if err != nil {

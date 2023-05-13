@@ -25,10 +25,8 @@ var noOfRetries = 20
 type sendChunkFunc func(context.Context, swarm.Chunk) (*pushsync.Receipt, error)
 
 func TestPOSProof(t *testing.T) {
-	// chunk data to reupload
 	chunk := testingc.FixtureChunk("7000")
 
-	// create a pivot node and a mocked closest node
 	pivotNode := swarm.MustParseHexAddress("0000000000000000000000000000000000000000000000000000000000000000")   // base is 0000
 	closestPeer := swarm.MustParseHexAddress("6000000000000000000000000000000000000000000000000000000000000000") // binary 0110 -> po 1
 
@@ -63,7 +61,6 @@ func TestPOSProof(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	// HACK: the address used for signing the message is not the same as the one used for topology
 	proved := status.Proved[realClosestAddr.String()]
 
 	if len(proved) != 1 || !proved[0].Equal(chunk.Address()) {
@@ -72,10 +69,8 @@ func TestPOSProof(t *testing.T) {
 }
 
 func TestPOSPush(t *testing.T) {
-	// chunk data to reupload
 	chunk := testingc.FixtureChunk("7000")
 
-	// create a pivot node and a mocked closest node
 	pivotNode := swarm.MustParseHexAddress("0000000000000000000000000000000000000000000000000000000000000000")   // base is 0000
 	closestPeer := swarm.MustParseHexAddress("6000000000000000000000000000000000000000000000000000000000000000") // binary 0110 -> po 1
 
@@ -129,10 +124,8 @@ func TestPOSPush(t *testing.T) {
 }
 
 func TestPOSForwardProof(t *testing.T) {
-	// chunk data to reupload
 	chunk := testingc.FixtureChunk("7000")
 
-	// create a pivot node and a mocked closest node
 	pivotNode := swarm.MustParseHexAddress("0000000000000000000000000000000000000000000000000000000000000000") // base is 0000
 	forwardNode := swarm.MustParseHexAddress("2000000000000000000000000000000000000000000000000000000000000000")
 	closestPeer := swarm.MustParseHexAddress("6000000000000000000000000000000000000000000000000000000000000000") // binary 0110 -> po 1
