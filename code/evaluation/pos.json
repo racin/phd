@@ -1,0 +1,30 @@
+{
+	"enable-protocols": [
+		"pos",
+		"pushsync"
+	],
+	"disable-protocols": [
+		"pullsync"
+	],
+	"fail-protocols": [
+		"pos"
+	],
+	"fail-percent": 25,
+	"fail-whitelist": [
+		1
+	],
+	"fail-type": "chunkloss",
+	"snapshots-path": "snapshots",
+	"metrics": [
+		"bee_pos_total_chunks",
+		"bee_pos_total_challenges",
+		"bee_pos_total_challenges_received",
+		"bee_pos_total_challenges_forwarded",
+		"bee_pos_total_proved",
+		"bee_pos_total_proofs_generated",
+		"bee_pos_total_reuploaded",
+		"bee_pos_total_errored",
+		"bee_pushsync_total_received",
+		"bee_pushsync_handler_replication"
+	]
+}

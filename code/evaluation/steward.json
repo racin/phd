@@ -1,0 +1,20 @@
+{
+	"enable-protocols": [
+		"pushsync"
+	],
+	"disable-protocols": [
+		"pullsync"
+	],
+	"fail-protocols": [
+		"pushsync"
+	],
+	"fail-percent": 10,
+	"fail-whitelist": [
+		1
+	],
+	"snapshots-path": "snapshots/steward",
+	"metrics": {
+		"bandwidth": "scalar(sum(bee_pushsync_total_received {job=\"pod-snarlbee-headless\"}) - sum(bee_pushsync_handler_replication {job=\"pod-snarlbee-headless\"})) * (135 + 4256)"
+	},
+	"metrics-wait": "1m"
+}

@@ -14,10 +14,10 @@ Code available: [https://github.com/relab/snarl-mw21](https://github.com/relab/s
 
 ## SNIPS: Succinct Proof of Storage for Efficient Data Synchronization in Decentralized Storage Systems
 
-[https://github.com/snarlorg/bee-snarl/tree/master/pkg/snips](https://github.com/snarlorg/bee-snarl/tree/master/pkg/snips)
+[https://github.com/racin/phd/code/bee-snarl/tree/master/pkg/snips](https://github.com/racin/phd/code/bee-snarl/tree/master/pkg/snips)
 
 ## Cost-effective Data Upkeep in Decentralized Storage Systems
-[https://github.com/snarlorg/bee-snarl/tree/master/pkg/pos](https://github.com/snarlorg/bee-snarl/tree/master/pkg/pos)
+[https://github.com/racin/phd/code/bee-snarl/tree/master/pkg/pos](https://github.com/racin/phd/code/bee-snarl/tree/master/pkg/pos)
 
 ## Evaluation Tools
 

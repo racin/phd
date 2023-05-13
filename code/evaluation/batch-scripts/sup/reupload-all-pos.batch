@@ -1,0 +1,60 @@
+# go run *.go --bees=1000 --batch=reupload-all-pos.batch --retries=5
+snapshots chunkloss 100 cd17f6535175c0ea3dd6faadeb5d4525515bd765b4ca5fe5866e6a4da98da7f5 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/1024-kb-1oc0KC1C
+
+snapshots chunkloss 100 68a52ed4957b690107a757fecbbabe365ee3336a09deb9e81284b840942b89b7 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/1024-kb-20aMAOqW
+
+snapshots chunkloss 100 439551ca70aa1246d8360b2a87df401ab48e6fb164ae366911fe13e190db8ad8 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/1024-kb-dlfNXZYo
+
+snapshots chunkloss 100 d14283ddfa59ee54e70807d6c7c5de73052584ea330a1317fcf20d724ab38741 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/1024-kb-XHU80gMG
+
+snapshots chunkloss 100 44a2e8bfc9eaf53407e9ec9d76037962c83a1a4db966bb04a2d94b0e471ab094 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/10240-kb-cUfk5fRu
+
+snapshots chunkloss 100 8450eba7f5537362080409c9395174a666d1a0ce755bfaf9e91bf6bc0517c12d /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/10240-kb-foMtYQQw
+
+snapshots chunkloss 100 382331e1f1ad54e57225dd6578bddc0746e2b25ecc8f7653a0481a31e62c7ec7 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/10240-kb-lUM3uIDB
+
+snapshots chunkloss 100 195f67066404c796c68ced43936472001d30d09dab65296be72fcbc32447b417 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/10240-kb-MnOrEtxo
+
+snapshots chunkloss 100 087078489cb6312889c1cc799cd0c7e51cbcb6e5426fd63ade35e076adf49a0c /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/102400-kb-eAy1t3rY
+
+snapshots chunkloss 100 b7319318609db795bb72ae2e5e5f8543b4ee737c3f05969a24bd99409e593c47 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/102400-kb-VhWVPxT7
+
+snapshots chunkloss 100 fcc18f7e1d78c60ed7afe85824707a5853dc976d03e616958bd62c0f4a37bee7 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/20480-kb-BDoRjGFc
+
+snapshots chunkloss 100 229dca45cc526dcc8eecdcd1b8b73c0f5346908266479c86fa166c653508b963 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/20480-kb-ZZabPRr6
+
+snapshots chunkloss 100 a4505e50c182f1cb9742412a90004e28ccd15b3a807000c829275e780ee32121 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/40960-kb-2BEM97Gw
+
+snapshots chunkloss 100 87eb936c07b921c3d102571862e46e41853239399993fd27d469bbde5cf1a3ca /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/40960-kb-Amkdp8il
+
+snapshots chunkloss 100 60e29c428a2bc0fd23a6625ec1591b771c930d451180cf1ee95180e0bf6dd43d /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/5120-kb-91ceX4m1
+
+snapshots chunkloss 100 5daa0c0fa362caa66d563f16993c25485f1ab930e4c92f2a64310966a49aaca1 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/5120-kb-vdHxeMvB
+
+snapshots chunkloss 100 121e78ddbd26662d6c6e934e1ae3f2ef1b0dfc544ea68244d8b97a9751302a33 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/61440-kb-bM2T2tsq
+
+snapshots chunkloss 100 9255d87774ffa9201bb88d8c3fcccca2930fab6441125fe0f77de90fc9dd8870 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/61440-kb-GjBtFVic
+
+snapshots chunkloss 100 32f7bcc3115632de297120852d85415a28d073e57ec0b62bf37d65794d53be78 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/81920-kb-1YK4kmc3
+
+snapshots chunkloss 100 ab636eb5ddadd29c66934a5feb24e5bcf4783ec389d9f944ab0bb37bea8d3e40 /home/stud/racin/dsps_experiment/snapshot_two --white-list=1001
+uploadfile --stamp="6518cc1236987cf42ad45d3f6769109513da929850a26888e922304a47352c09" /home/stud/racin/dsps_experiment/snapshot_two/files/81920-kb-poWugRSU

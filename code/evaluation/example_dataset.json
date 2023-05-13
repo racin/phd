@@ -1,0 +1,37 @@
+{
+  "output_path": "/home/racin/dsps_experiment",
+  "sizes": [
+    {
+      "size_kb": 1024,
+      "count": 5
+    },
+    {
+      "size_kb": 5120,
+      "count": 5
+    },
+    {
+      "size_kb": 10240,
+      "count": 5
+    },
+    {
+      "size_kb": 20480,
+      "count": 2
+    },
+    {
+      "size_kb": 40960,
+      "count": 2
+    },
+    {
+      "size_kb": 61440,
+      "count": 2
+    },
+    {
+      "size_kb": 81920,
+      "count": 2
+    },
+    {
+      "size_kb": 102400,
+      "count": 2
+    }
+  ]
+}

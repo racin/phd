@@ -1,0 +1,45 @@
+# protocols
+protocols enable pullsync
+protocols enable pushsync
+protocols enable pos
+protocols enable retrievalsync
+protocols disable chainsync
+# Upload two fresh 100 MB files, run lots of proof-of-storage on them.
+# "102400": ["20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312", "1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741"]
+# File A
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+request --method="POST" --api /pos/20b33549984831ea6a9a3ebadd22bca73ea4b1d3dc433e22850f73011bcb9312 --output /dev/null
+# File B
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+request --method="POST" --api /pos/1696425eefafee0a5a9bac83c73c3ecca277924a2257d7c9328f9a834301a741 --output /dev/null
+# Collect metrics 
