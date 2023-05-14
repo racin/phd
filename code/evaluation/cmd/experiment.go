@@ -193,11 +193,11 @@ func runExperiment(ctx context.Context, name, outputPath, snapshotsPath string, 
 			needSnapshotUpload := false
 			var allChunks map[string]struct{}
 			var lostChunks map[string]struct{}
-			// try to apply a snapshot that is valid for all tests
+
 			err = retryFunc(ctx, ctl, func() error {
 				if allChunksPath == "" {
 					err = uploadSnapshotsForWholeDataset(ctx, ctl, snapshotsPath, dataset, percent)
-					// if there is a duplicate, each test needs to upload its own snapshot
+
 					if errors.Is(err, ErrDuplicate) {
 						needSnapshotUpload = true
 						return nil
@@ -212,7 +212,7 @@ func runExperiment(ctx context.Context, name, outputPath, snapshotsPath string, 
 					if err != nil {
 						return err
 					}
-					err = snapshot.UploadAndApplyWithChunkLoss(ctx, ctl, snapshotsPath, lostChunks, uploaderID) // Pick one of the peers in the neighborhood (allChunksPath)
+					err = snapshot.UploadAndApplyWithChunkLoss(ctx, ctl, snapshotsPath, lostChunks, uploaderID)
 				}
 				return err
 			})
@@ -345,7 +345,6 @@ type reuploadResult struct {
 func runSingle(ctx context.Context, ctl bee.Controller, name, outputPath, snapshotsPath string, uploadSnapshot bool, fileAddr string, chunkloss float64, nonce uint64, allChunks map[string]struct{}, lostChunks map[string]struct{}, promapi v1.API, revNeighborMap neighbor.ReverseNeighborMap) (_ reuploadResult, err error) {
 	if uploadSnapshot {
 		if name != "pullsync" && name != "snips" {
-			// cause chunk loss
 			chunks, err := snapshot.GetChunkLossTraverse(ctx, ctl.Connector(), uploaderID, fileAddr, chunkloss)
 			if err != nil {
 				return reuploadResult{}, err
@@ -399,11 +398,6 @@ func runSingle(ctx context.Context, ctl bee.Controller, name, outputPath, snapsh
 				return reuploadResult{}, fmt.Errorf("failed to run Clear Cursors: %w", err)
 			}
 			subdur2 += subsubdur2
-			// subdur2, err = pullsync.ClearPullSync(ctx, ctl, neighborID, "all")
-			// if err != nil {
-			// 	return reuploadResult{}, fmt.Errorf("failed to run Clear Cursors: %w", err)
-			// }
-
 		}
 
 		for _, neighborID := range allRevNeighborIDs {
@@ -413,10 +407,6 @@ func runSingle(ctx context.Context, ctl bee.Controller, name, outputPath, snapsh
 			}
 			subdur3 += subsubdur3
 		}
-		// subdur3, err = pullsync.StartPullSync(ctx, ctl, allNeighborIDs[0])
-		// if err != nil {
-		// 	return reuploadResult{}, err
-		// }
 		dur, err := prometheus.MeasureRateFallTime(ctx, promapi, 600*time.Second, 12*time.Hour, "sum(bee_pullsync_db_ops) + sum(bee_pullsync_total_cursor_req_sent)+ sum(bee_pullsync_total_cursor_req_recv) + sum(bee_pullsync_total_ruid_sent) + sum(bee_pullsync_total_offer_sent) + sum(bee_pullsync_total_want_sent)")
 
 		if err != nil {
@@ -444,7 +434,6 @@ func runSingle(ctx context.Context, ctl bee.Controller, name, outputPath, snapsh
 		}
 		duration = subdur + dur
 
-		// 1. Get uploaderID neighbors
 		neighbors, err := neighbor.GetMyNeighbors(ctx, ctl, uploaderID)
 		if err != nil {
 			return reuploadResult{}, err
@@ -539,9 +528,7 @@ func runSinglePOS(ctx context.Context, ctl bee.Controller, outputPath, fileAddr 
 			return 0, fmt.Errorf("failed to write POS result: %w", err)
 		}
 	}
-
 	return duration, err
-
 }
 
 func humanizeBytes(b int64) string {

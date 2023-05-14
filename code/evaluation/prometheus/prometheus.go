@@ -56,7 +56,6 @@ func MeasureRateFallTime(ctx context.Context, api v1.API, waitRise time.Duration
 		if scalar[0].Value.Equal(oldVal) {
 			if didRise && equalCntr == equalMaxCntr {
 				return durationSinceGotValue, nil
-				// return time.Since(now) - time.Duration(measureInterval*equalMaxCntr), nil
 			} else if !didRise && time.Since(now) > waitRise {
 				return 0, fmt.Errorf("did not rise after %s", waitRise)
 			} else if durationSinceGotValue > maxWait {
@@ -75,33 +74,6 @@ func MeasureRateFallTime(ctx context.Context, api v1.API, waitRise time.Duration
 		<-time.After(measureInterval)
 	}
 }
-
-// func MeasureRateFallTime(ctx context.Context, api v1.API, waitRise time.Duration, query string) (time.Duration, error) {
-// 	now := time.Now()
-// 	didRise := false
-// 	for {
-// 		result, _, err := api.Query(context.TODO(), query, time.Now())
-// 		if err != nil {
-// 			return 0, err
-// 		}
-
-// 		scalar := result.(model.Vector)
-// 		if len(scalar) != 1 {
-// 			return 0, fmt.Errorf("expected 1 result, got %d", len(scalar))
-// 		}
-
-// 		if scalar[0].Value == 0 {
-// 			if didRise {
-// 				return time.Since(now), nil
-// 			} else if time.Since(now) > waitRise {
-// 				return 0, fmt.Errorf("did not rise after %s", waitRise)
-// 			}
-// 		} else if !didRise {
-// 			didRise = true
-// 		}
-// 		<-time.After(100 * time.Millisecond)
-// 	}
-// }
 
 func RatePoller(ctx context.Context, api v1.API, query string) (time.Duration, error) {
 	now := time.Now()

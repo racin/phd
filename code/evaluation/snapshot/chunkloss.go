@@ -269,8 +269,8 @@ func GetChunkListFromFile(ctx context.Context, chunkIDsPath string) (map[string]
 		chunkMap[chunkid] = struct{}{}
 	}
 	return chunkMap, err
-
 }
+
 func HasAllChunks(ctx context.Context, ctl bee.Controller, beeID int, chunkMap map[string]struct{}) (bool, error) {
 	host, disconnect, err := ctl.Connector().ConnectDebug(ctx, beeID)
 	if err != nil {

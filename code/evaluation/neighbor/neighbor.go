@@ -59,9 +59,6 @@ func GetNeighborMap(ctx context.Context, ctl bee.Controller, beeID int) (NM Neig
 		return nil
 	})
 
-	//fmt.Printf("Got neighbors: %+v\n", NM)
-	// util.PrintJson(os.Stdout, reverseNM)
-
 	if err != nil {
 		return nil, nil, err
 	}
@@ -117,10 +114,8 @@ func GetMyNeighbors(ctx context.Context, ctl bee.Controller, beeID int) ([]addrR
 }
 
 func VerifyNeighborMaps(forwardMap NeighborMap, reverseMap ReverseNeighborMap) {
-	// fmt.Printf("Rev: %+v\n", reverseMap)
 	for pod, neighbors := range forwardMap {
 		for _, neighbor := range neighbors {
-			// fmt.Printf("Pod %s has neighbor %s\n", pod, neighbor.HostName)
 			if !util.Contains(reverseMap[neighbor.HostName], pod) {
 				fmt.Printf("Pod %s has neighbor %s but %s does not have %s as a neighbor\n", pod, neighbor.HostName, neighbor.HostName, pod)
 			}

@@ -15,7 +15,6 @@ var (
 	chunkLossWhiteList []int
 )
 
-// snapshotsCmd represents the snapshot command
 var snapshotsCmd = &cobra.Command{
 	Use:   "snapshots",
 	Short: "Create and apply snapshots",

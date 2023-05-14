@@ -228,7 +228,6 @@ func getController(ctx context.Context) (bee.Controller, error) {
 		if ctl.BaseLen() >= numBees {
 			return ctl.Sub(ctl.IDs()[:numBees]), nil
 		}
-		// need to re-create controller
 		err := ctl.Close()
 		if err != nil {
 			return nil, err

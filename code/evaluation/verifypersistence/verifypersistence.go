@@ -87,7 +87,6 @@ func VerifyPersistence(ctx context.Context, chunksdir, host string, verifyInterv
 			if hash != retrievedHash {
 				log.Printf(" - Retrieved hash does not match for chunk %v, Want: %v, Got: %v\n", key, hash, retrievedHash)
 			}
-			//fmt.Printf("%v\n", data)
 			correctChunks++
 		}
 		pw.Done()
