@@ -16,13 +16,13 @@ See also the updated web-based version.
 
 ## SNIPS: Succinct Proof of Storage for Efficient Data Synchronization in Decentralized Storage Systems
 
-Code available here: [https://github.com/racin/phd/code/bee-snips-sup/tree/master/pkg/snips](https://github.com/racin/phd/code/bee-snips-sup/tree/master/pkg/snips)
+Code available here: [https://github.com/racin/phd/tree/main/code/bee-snips-sup/pkg/snips](https://github.com/racin/phd/tree/main/code/bee-snips-sup/pkg/snips)
 
 ## Cost-effective Data Upkeep in Decentralized Storage Systems
-Code available here: [https://github.com/racin/phd/code/bee-snips-sup/tree/master/pkg/pos](https://github.com/racin/phd/code/bee-snips-sup/tree/master/pkg/pos)
+Code available here: [https://github.com/racin/phd/tree/main/code/bee-snips-sup/pkg/pos](https://github.com/racin/phd/tree/main/code/bee-snips-sup/pkg/pos)
 
 ## Evaluation Tools
-Code available here: [https://github.com/racin/phd/code/evaluation](https://github.com/racin/phd/code/evaluation)
+Code available here: [https://github.com/racin/phd/tree/main/code/evaluation](https://github.com/racin/phd/tree/main/code/evaluation)
 
 ## Configuration Files
 Available per request.
