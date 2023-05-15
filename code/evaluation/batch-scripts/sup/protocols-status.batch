@@ -1,6 +1,0 @@
-# protocols
-protocols enable pullsync
-protocols enable pushsync
-protocols enable pos
-protocols enable retrievalsync
-protocols disable chainsync

@@ -22,7 +22,6 @@ import (
 )
 
 // Verifies the persistence in the Swarm main net.
-
 func VerifyPersistence(ctx context.Context, chunksdir, host string, verifyInterval, requestInterval time.Duration) (err error) {
 
 	files, err := ioutil.ReadDir(chunksdir)
